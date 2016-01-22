@@ -48,5 +48,8 @@ group :development do
 
   gem 'therubyracer'
 
+  gem "font-awesome-rails"
+
+
 end
 
