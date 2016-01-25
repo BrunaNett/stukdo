@@ -1,20 +1,26 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_task, only: [:show, :edit, :update, :destroy]
+
+  respond_to :html
 
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = current_user.tasks #associating all the tasks to that current user
+    respond_with(@tasks)
   end
 
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    respond_with(@task)
   end
 
   # GET /tasks/new
   def new
     @task = Task.new
+    respond_with(@task)
   end
 
   # GET /tasks/1/edit
@@ -24,7 +30,8 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(task_params)
+    @task = current_user.tasks.new(task_params)
+
 
     respond_to do |format|
       if @task.save
