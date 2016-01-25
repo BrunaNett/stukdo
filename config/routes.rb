@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'pages#home'
    get 'about' => 'pages#about' #routing the about page to link to the action of the pages about
+   get 'test' => 'pages#test' #testing only
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
