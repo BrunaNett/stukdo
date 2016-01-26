@@ -54,6 +54,9 @@ group :development do
 
   gem 'devise'
 
+  gem 'auto_html', '1.6.4'
+
+
 
 
 end

@@ -8,7 +8,7 @@
 	<%= link_to "x", task_path(task), method: :delete, data: {confirm: "Are you sure?"}, class: "pull-right"%>
 	</div>
 	
-	<div class="panel-body"><%= task.content %></div>
+	<div class="panel-body"><%= raw(task.content_html) %></div> <!-- the *raw* is for the auto_html gem-->
 	
 	<div class="panel-footer text-center">
 		<% if task.state  == "doing" %>
