@@ -12,3 +12,4 @@ class Task < ActiveRecord::Base
 		simple_format
 	end
 end
+
