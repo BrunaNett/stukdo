@@ -58,9 +58,7 @@ gem 'simple_form'
 
 gem 'devise'
 
-gem 'auto_html', '1.6.4'
-
-
+gem 'auto_html', '~> 2.0'
 
 
 
